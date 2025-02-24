@@ -28,7 +28,7 @@ const EditModal = ({ post, onSave, onClose }) => {
   return (
     <div style={styles.modal}>
       <div style={styles.card}>
-        <h2>Edit Post</h2>
+        <h2>Edit item</h2>
         <input
           type="text"
           value={title}
@@ -40,8 +40,13 @@ const EditModal = ({ post, onSave, onClose }) => {
           onChange={(e) => setContent(e.target.value)}
           style={styles.textarea}
         />
-        <button onClick={handleSubmit} style={styles.button}>Save</button>
-        <button onClick={onClose} style={styles.button}>Cancel</button>
+        <div style={{
+          display:'flex',
+          justifyContent:'flex-end',}}>
+          <button onClick={handleSubmit} style={styles.button}>Save</button>
+          <button onClick={onClose} style={styles.button}>Cancel</button>
+        </div>
+        
       </div>
     </div>
   );
@@ -64,9 +69,11 @@ const styles = {
     padding: '20px',
     borderRadius: '8px',
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
+    width: '500px',
+    height: '300px',
   },
   input: {
-    width: '100%',
+    width: '95%',
     padding: '10px',
     margin: '10px 0',
     border: '1px solid #ccc',
@@ -79,6 +86,8 @@ const styles = {
     border: '1px solid #ccc',
     borderRadius: '4px',
     minHeight: '100px',
+    resize: 'none',
+    width: '95%',
   },
   button: {
     backgroundColor: '#007BFF',
@@ -88,7 +97,7 @@ const styles = {
     borderRadius: '4px',
     cursor: 'pointer',
     marginRight: '10px',
-  },
+  }
 };
 
 export default EditModal;

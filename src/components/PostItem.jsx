@@ -24,7 +24,7 @@ const PostItem = ({ post, username, onDelete, onUpdate }) => {
   return (
     <div style={styles.post}>
       <div style={styles.header}>
-        <div>
+        <div style={{ fontSize: '15px', fontWeight: '600', marginLeft: '8px' }}>
           {post.title}
         </div>
         {isOwnPost && ( // se for o dono do post, então mostra edição e delete
