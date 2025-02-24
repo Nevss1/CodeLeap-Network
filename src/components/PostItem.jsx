@@ -83,13 +83,13 @@ const styles = {
     cursor: 'pointer',
   },
   username: {
-    padding: '10px 2px 10px 10px',
+    padding: '10px 0px 0px 20px',
     fontSize: '12px',
     color: '#666',
   },
   content: {
-    padding: '0px 10px 10px 10px',
-    fontSize: '14px',
+    padding: '10px 20px 20px 20px',
+    fontSize: '16px',
     color: '#333',
   },
   footer: {
